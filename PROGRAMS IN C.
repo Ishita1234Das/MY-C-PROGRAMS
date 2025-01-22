@@ -1,3 +1,13 @@
+DAY 1://C programs to find size of the processor using pointer.
+#include <stdio.h>
+
+int main()
+{
+	int *ptr;
+	printf("size of processor's word(pointer size):%zu bytes\n",sizeof(ptr));
+	return 0;
+}
+DAY 2:
 //C program to check head or tail
 #include <stdio.h>
 int main()
@@ -48,5 +58,51 @@ int main()
 int main()
 {
 	printf("Adamas University");
+	return 0;
+}
+
+//C programs to find greatest of 3 number using ladder if-else
+#include <stdio.h>
+int main()
+{
+	int a,b,c;
+	printf("Enter the value of three number:");
+	scanf("%d %d %d",&a,&b,&c);
+	if(a>b && a>c)
+	{
+		printf("a is maximum");
+	}
+	else if("b>a && b>c")
+	{
+		printf("b is maximum");
+	}
+	else
+	{
+		printf("c is maximum");
+	}
+	return 0;
+}
+
+//C programs to find greatest of 3 number using Nested if-else
+#include <stdio.h>
+int main()
+{
+	int a,b,c;
+	printf("Enter the value of three number:");
+	scanf("%d %d %d",&a,&b,&c);
+	if (a>b)
+	{
+	if (a>c)	
+	printf("a is maximum");
+	else 
+	printf("c is maximum");
+    }
+	else
+	{
+	if (b>c)	
+	printf("b is maximum");
+	else 
+	printf("b is maximum");
+	}
 	return 0;
 }
