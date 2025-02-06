@@ -323,6 +323,155 @@ int main() {
     return 0;
 }
 
+DAY:4
+
+// Function to calculate factorial
+#include <stdio.h>
+long factorial(int num) {
+    if (num == 0 || num == 1) {
+        return 1;
+    } else {
+        return num * factorial(num - 1);
+    }
+}
+
+int main() {
+    int num;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.");
+    } else {
+        printf("Factorial of %d = %ld\n", num, factorial(num));
+    }
+
+    return 0;
+}
+
+// Recursive function to calculate factorial
+#include <stdio.h>
+long factorial(int num) {
+    if (num == 0 || num == 1) {
+        return 1;
+    } else {
+        return num * factorial(num - 1);
+    }
+}
+
+int main() {
+    int num;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.");
+    } else {
+        printf("Factorial of %d = %ld\n", num, factorial(num));
+    }
+
+    return 0;
+}
+
+// Function to calculate Fibonacci series
+#include <stdio.h>
+int fibonacci(int n) {
+    if (n == 0 || n == 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci series: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+
+    return 0;
+}
+
+// Recursive function to calculate Fibonacci series
+#include <stdio.h>
+int fibonacci(int n) {
+    if (n == 0 || n == 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci series: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+
+    return 0;
+}
+
+// Recursive function to calculate GCD
+#include <stdio.h>
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    } else {
+        return gcd(b, a % b);
+    }
+}
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("GCD of %d and %d is: %d\n", num1, num2, gcd(num1, num2));
+return 0;
+}
+
+//CALL BY VALUE & CALL BY REFERENCE TO SWAP NUMBERS IN A SAME PROGRAM.
+#include <stdio.h>
+// Function to swap two numbers using call by value
+void swap_value(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    printf("Inside swap_value function: a = %d, b = %d\n", a, b);
+}
+
+// Function to swap two numbers using call by reference
+void swap_reference(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+    printf("Inside swap_reference function: a = %d, b = %d\n", *a, *b);
+}
+
+int main() {
+    int num1 = 10, num2 = 20;
+
+    printf("Before swapping (call by value): num1 = %d, num2 = %d\n", num1, num2);
+    swap_value(num1, num2);
+    printf("After swapping (call by value): num1 = %d, num2 = %d\n", num1, num2);
+
+    printf("\nBefore swapping (call by reference): num1 = %d, num2 = %d\n", num1, num2);
+    swap_reference(&num1, &num2);
+    printf("After swapping (call by reference): num1 = %d, num2 = %d\n", num1, num2);
+
+    return 0;
+}
+
+
+
+
 
 
 
