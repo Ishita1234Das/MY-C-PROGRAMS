@@ -1,9 +1,0 @@
-DAY-1/FIND SIZE OF PROCESSOR.
-@@ -0,0 +1,7 @@
-#include<stdio.h>
-int main()
-{
-  double*p;
-printf("The size is %d bit",size of (p)*s);
-return 0;
-}
