@@ -418,6 +418,7 @@ int main() {
 
     return 0;
 }
+DAY 5:
 
 // Recursive function to calculate GCD
 #include <stdio.h>
@@ -468,6 +469,279 @@ int main() {
 
     return 0;
 }
+
+#include <stdio.h>
+
+// Function to print a 2D array
+void printMatrix(int matrix[][3], int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+// Function to transpose a 2D array
+void transposeMatrix(int matrix[][3], int rows, int cols) {
+    int transpose[cols][rows];
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+
+    // Print the transposed matrix
+    printf("Transposed Matrix:\n");
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            printf("%d ", transpose[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int rows = 3;
+    int cols = 3;
+    int matrix[rows][cols] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    printf("Original Matrix:\n");
+    printMatrix (matrix, rows, cols)
+
+    transposeMatrix(matrix, rows, cols);
+
+    return 0;
+}
+#include <stdio.h>
+
+// Function to add two arrays
+void addArrays(int arr1[], int arr2[], int arr3[], int size) {
+    for (int i = 0; i < size; i++) {
+        arr3[i] = arr1[i] + arr2[i];
+    }
+}
+
+// Function to print an array
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int size = 5;
+    int arr1[] = {1, 2, 3, 4, 5};
+    int arr2[] = {5, 4, 3, 2, 1};
+    int arr3[size];  // Array to store the sum
+
+    printf("Array 1: ");
+    printArray(arr1, size);
+
+    printf("Array 2: ");
+    printArray(arr2, size);
+
+    addArrays(arr1, arr2, arr3, size);
+
+    printf("Sum of Array 1 and Array 2: ");
+    printArray(arr3, size);
+    return 0;
+}
+DAY 6:
+//ADD 2 ARRAYS
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the size of the arrays: ");
+    scanf("%d", &n);
+
+    int arr1[n], arr2[n], sum[n];
+
+    printf("Enter elements of array 1: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr1[i]);
+    }
+
+    printf("Enter elements of array 2: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr2[i]);
+    }
+
+    // Add the two arrays
+    for (int i = 0; i < n; i++) {
+        sum[i] = arr1[i] + arr2[i];
+    }
+
+    printf("Sum of the two arrays: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", sum[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Initialize max and min with the first element
+    int max = arr[0];
+    int min = arr[0];
+
+    // Find max and min
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    printf("Maximum element: %d\n", max);
+    printf("Minimum element: %d\n", min);
+
+    return 0;
+}
+int linearSearch(int arr[], int n, int target) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == target) {
+            return i; // Return the index of the target element
+        }
+    }
+    return -1; // Return -1 if the target element is not found
+}
+
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int target;
+    printf("Enter the target element: ");
+    scanf("%d", &target);
+
+    int result = linearSearch(arr, n, target);
+
+    if (result == -1) {
+        printf("Target element not found in the array.\n");
+    } else {
+        printf("Target element found at index %d.\n", result);
+    }
+
+    return 0;
+}
+
+int linearSearch(int arr[], int n, int target) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == target) {
+            return i; // Return the index of the target element
+        }
+    }
+    return -1; // Return -1 if the target element is not found
+}
+
+C PROGRAM TO IMPLEMENT LINEAR SEARCH
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int target;
+    printf("Enter the target element: ");
+    scanf("%d", &target);
+
+    int result = linearSearch(arr, n, target);
+
+    if (result == -1) {
+        printf("Target element not found in the array.\n");
+    } else {
+        printf("Target element found at index %d.\n", result);
+    }
+
+    return 0;
+}
+C PROGRAM TO IMPLEMENT BINARY SEARCH
+#include <stdio.h>
+
+int binarySearch(int arr[], int n, int target) {
+    int low = 0;
+    int high = n - 1;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+
+        if (arr[mid] == target) {
+            return mid; // Return the index of the target element
+        } else if (arr[mid] < target) {
+            low = mid + 1; // Search in the right half
+        } else {
+            high = mid - 1; // Search in the left half
+        }
+    }
+
+    return -1; // Return -1 if the target element is not found
+}
+
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements in ascending order:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int target;
+    printf("Enter the target element: ");
+    scanf("%d", &target);
+
+    int result = binarySearch(arr, n, target);
+
+    if (result == -1) {
+        printf("Target element not found in the array.\n");
+    } else {
+        printf("Target element found at index %d.\n", result);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
 
 
 
