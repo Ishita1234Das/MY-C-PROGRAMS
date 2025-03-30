@@ -736,6 +736,44 @@ int main() {
     return 0;
 }
 
+C PROGRAM WHICH WILL ADD TWO DISTANCES GIVEN IN FEET USING STRUCTURE
+#include <stdio.h>
+// Define a structure to represent distance in feet
+typedef struct {
+    int feet;
+} Distance;
+
+// Function to add two distances
+Distance addDistances(Distance d1, Distance d2) {
+    Distance sum;
+    sum.feet = d1.feet + d2.feet;
+    return sum;
+}
+
+int main() {
+    // Declare two distances
+    Distance d1, d2;
+
+    // Input the distances
+    printf("Enter distance 1 in feet: ");
+    scanf("%d", &d1.feet);
+
+    printf("Enter distance 2 in feet: ");
+    scanf("%d", &d2.feet);
+
+    // Add the distances
+    Distance sum = addDistances(d1, d2);
+
+    // Print the result
+    printf("Sum of the distances: %d feet\n", sum.feet);
+
+    return 0;
+}
+
+
+
+
+
 
 
 
